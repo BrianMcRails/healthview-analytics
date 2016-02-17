@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HealthviewAnalytics</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Healthview Analytics</title>
+    <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- Header -->
+	<header id="header">
+		<h1><%= link_to 'Healthview Analytics', root_path %></h1>
+		<nav id="nav">
+			<ul>
+				<% if user_signed_in? %>
+				<!-- these links used to be  class="button special" -->
+					Currently signed in as <%= current_user.email %>. Not you?
+					<li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+				<% else %>
+					<li><%= button_to 'Sign Up', new_user_registration_path %></li>
+					<li><%= button_to 'Sign In', new_user_session_path %></li>
+				<% end %>
+				<li><%= link_to 'Home', root_path %></li>
+				<li><%= link_to 'Analytics Showcase', analytics_showcase_path %></li>
+				<li><%= link_to 'Services', services_path %></li>
+
+			</ul>
+		</nav>
+	</header>
 
 <%= yield %>
 
