@@ -1212,8 +1212,12 @@
 				-o-transition: color 0.2s ease-in-out;
 				-ms-transition: color 0.2s ease-in-out;
 				transition: color 0.2s ease-in-out;
+				color: #cdced0;
 				text-decoration: none;
 			}
+				#header h1 a:hover {
+					color: #ffffff;
+				}
 
 		#header nav {
 			height: inherit;
