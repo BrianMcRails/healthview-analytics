@@ -8,4 +8,7 @@ class WelcomeController < ApplicationController
   def services
   end
   
+  def elements
+  	
+  end
 end

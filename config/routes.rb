@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/home'
   get 'welcome/showcase' => 'welcome#showcase', as: :analytics_showcase
   get 'welcome/services' => 'welcome#services', as: :services
-
+  get 'welcome/elements' => 'welcome#elements', as: :elements
   devise_for :users
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'welcome#home'
-   get 'hva' => 'posts#hva', as: :hva
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

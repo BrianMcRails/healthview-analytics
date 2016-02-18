@@ -14,15 +14,16 @@
 			<ul>
 				<% if user_signed_in? %>
 				<!-- these links used to be  class="button special" -->
-					Currently signed in as <%= current_user.email %>. Not you?
-					<li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+					 Signed in as <%= current_user.email %>. Not you?
+					<li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
 				<% else %>
-					<li><%= button_to 'Sign Up', new_user_registration_path %></li>
-					<li><%= button_to 'Sign In', new_user_session_path %></li>
+					<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+					<li><%= link_to 'Sign In', new_user_session_path %></li>
 				<% end %>
 				<li><%= link_to 'Home', root_path %></li>
 				<li><%= link_to 'Analytics Showcase', analytics_showcase_path %></li>
 				<li><%= link_to 'Services', services_path %></li>
+				<li><%= link_to 'Forum', elements_path %></li>
 
 			</ul>
 		</nav>
