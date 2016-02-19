@@ -3,13 +3,16 @@ Rails.application.routes.draw do
   get 'welcome/showcase' => 'welcome#showcase', as: :analytics_showcase
   get 'welcome/services' => 'welcome#services', as: :services
   get 'welcome/elements' => 'welcome#elements', as: :elements
+  get 'welcome/home2' => 'welcome#home2', as: :home2
+
+
   devise_for :users
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'welcome#home'
+   root 'welcome#home2'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

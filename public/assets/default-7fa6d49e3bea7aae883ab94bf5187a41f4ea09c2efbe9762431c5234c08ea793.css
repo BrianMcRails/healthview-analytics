@@ -1,0 +1,15 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin);
+@import "bootstrap.min.css";
+@import "style.css";
+@import "header-default.css";
+@import "footer-v1.css";
+@import "animate.css";
+@import "line-icons.css";
+@import "font-awesome.min.css";
+@import "parallax-slider.css";
+@import "owl.carousel.css";
+@import "purple.css";
+@import "dark.css";

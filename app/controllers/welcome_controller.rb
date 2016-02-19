@@ -11,4 +11,7 @@ class WelcomeController < ApplicationController
   def elements
   	
   end
+
+  def homepage2
+  end
 end
