@@ -7,8 +7,8 @@
 */
 
 /*Import Global Compulsory CSS Files*/
-@import "app.css";
-@import "blocks.css";
+@import "additional/app.css";
+@import "additional/blocks.css";
 
 * {
 	border-radius: 0;

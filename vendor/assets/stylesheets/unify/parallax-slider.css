@@ -4,7 +4,7 @@
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
-	background: transparent url(../assets/bg.jpg) repeat 0% 0%;
+	background: transparent url(../bg.jpg) repeat 0% 0%;
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;
 	-webkit-transition: background-position 1.4s ease-in-out 0.3s;
 	-moz-transition: background-position 1.4s ease-in-out 0.3s;
@@ -77,7 +77,7 @@
 	margin-left:-2%;
 }
 .da-slide p i {
-	background:url(../img/bg-text.png) repeat;
+	background:url(../bg-text.png) repeat;
 	padding:0 10px;
 	font-style:normal;
 }
@@ -148,7 +148,7 @@
 	-webkit-user-select: none;
 }
 .da-arrows span{
-	background: transparent url(../img/arrows.png) no-repeat;
+	background: transparent url(../arrows.png) no-repeat;
 	position: absolute;
 	top: 50%;
 	height: 50px;

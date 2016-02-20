@@ -150,32 +150,32 @@
 ----------------------------------------------------*/
 /*Promo Background Images*/
 .promo-bg-pattern-v1-dark {
-  background: url(../img/patterns/5.png) repeat;
+  background: url(../assets/5.png) repeat;
 }
 
 .promo-bg-pattern-v1-light {
-  background: url(../img/patterns/16.png) repeat;
+  background: url(../assets/16.png) repeat;
 }
 
 /*Promo Background Images*/
 .promo-bg-img-v1 {
-  background: url(../img/bg/img1.jpg) no-repeat;
+  background: url(../assets/img1.jpg) no-repeat;
   background-size: cover;
 }
 .promo-bg-img-v2 {
-  background: url(../img/bg/img5.jpg) no-repeat;
+  background: url(../assets/img5.jpg) no-repeat;
   background-size: cover;
 }
 .promo-bg-img-v3 {
-  background: url(../img/bg/img10.jpg) no-repeat;
+  background: url(../assets/img10.jpg) no-repeat;
   background-size: cover;
 }
 .promo-bg-img-v4 {
-  background: url(../img/bg/img11.jpg) no-repeat;
+  background: url(../assets/img11.jpg) no-repeat;
   background-size: cover;
 }
 .promo-bg-img-v5 {
-  background: url(../img/bg/img6.jpg) no-repeat;
+  background: url(../assets/img6.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -249,7 +249,7 @@
   overflow: hidden;
   padding: 10px 0 6px;
   border-bottom: solid 1px #eee;
-  background: url(../img/patterns/breadcrumbs.png) repeat;
+  background: url(../breadcrumbs.png) repeat;
 }
 
 .video-business-img1 {
@@ -6282,7 +6282,7 @@
 .purchase {
 	padding: 25px 0 30px;
 	border-bottom: solid 1px #eee;
-	background: url(../img/patterns/breadcrumbs.png) repeat;
+	background: url(../breadcrumbs.png) repeat;
 }
 
 .purchase p {
@@ -6759,7 +6759,7 @@ a.thumbnail {
 	padding: 40px 0;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
-	background: url(../img/breadcrumbs.png) repeat;
+	background: url(../breadcrumbs.png) repeat;
 }
 
 /*Gallery Page
