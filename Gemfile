@@ -44,6 +44,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'haml'
 gem 'haml-rails'
 
+#added by Brian for heroku
+gem 'rails_12factor'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
