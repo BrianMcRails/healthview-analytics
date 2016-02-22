@@ -7,10 +7,6 @@ class WelcomeController < ApplicationController
 
   def services
   end
-  
-  def elements
-  	
-  end
 
   def homepage2
   end

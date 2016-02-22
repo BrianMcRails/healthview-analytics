@@ -11,7 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require app
+//= require jquery.cslider
+//= require owl.carousel.js
+//= require jquery.parallax.js
+//= require parallax-slider.js
+//= require modernizr.custom.28468
+
+
