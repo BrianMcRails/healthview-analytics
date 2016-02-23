@@ -38,7 +38,7 @@
 				<div class="topbar">
 					<ul class="loginbar pull-right">
 						<% if user_signed_in? %>
-							<li><%= current_user.email %></li>
+							<li>Currently signed in as <%= current_user.email %></li><br />
 						<% else %>
 						<% end %>
 						<li class="hoverSelector">
