@@ -1,5 +1,89 @@
 <p id="notice"><%= notice %></p>
 
+  <div class="wrapper">
+    <!--=== Header ===-->
+ 
+    <!--=== End Header ===-->
+
+    <!--=== Breadcrumbs v1 ===-->
+    <div class="breadcrumbs-v1">
+      <div class="container">
+        <span>Welcome to the Lumedx General Forum</span>
+        <h1>Interact with other Lumedx Analytics users about how to get the most out of your reports!</h1>
+      </div>
+    </div>
+    <!--=== End Breadcrumbs v1 ===-->
+    <div class="container content-md">
+              <p><strong><%= link_to 'New Post', new_post_path %></strong></p>
+    </div>
+
+    <!--=== Blog Posts ===-->
+    <div class="container content-md">
+      <!-- News v3 -->
+      <% @posts.each do |post| %>
+      <div class="row margin-bottom-20">
+        <div class="col-sm-5 sm-margin-bottom-20">
+          <img class="img-responsive" src="../assets/img2.jpg" alt="">
+        </div>
+        <div class="col-sm-7">
+          <div class="news-v3">
+            <ul class="list-inline posted-info">
+              <li>By <%= post.user.email %></li>
+              <li>Posted <%= time_ago_in_words post.created_at %></li>
+            </ul>
+            <h2><a href="#"><%= link_to (post.title), post_path(post) %></a></h2>
+            <p><%= link_to (post.content), post_path(post) %></p>
+            <ul class="post-shares">
+              <li>
+                <a href="#">
+                  <i class="rounded-x icon-speech"></i>
+                  <span><%= post.comments.count %></span>
+                </a>
+              </li>
+              <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+              <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div><!--/end row-->
+
+      <% end %>
+      <!-- End News v3 -->
+
+      <div class="clearfix margin-bottom-20"><hr></div>
+
+      <!-- Pager v3 -->
+      <ul class="pager pager-v3 pager-md no-margin-bottom">
+        <li class="previous"><a href="#">&larr; Older</a></li>
+        <li class="page-amount">1 of 7</li>
+        <li class="next"><a href="#">Newer &rarr;</a></li>
+      </ul>
+      <!-- End Pager v3 -->
+    </div><!--/end container-->
+    <!--=== End Blog Posts ===-->
+
+    <!--=== Footer Version 1 ===-->
+  <%= render 'footer' %>
+    <!--=== End Footer Version 1 ===-->
+  </div><!--/wrapper-->
+
+
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      App.init();
+      StyleSwitcher.initStyleSwitcher();
+    });
+  </script>
+
+
+
+
+
+
+
+<!-- WORKING CODE
+
+
 <section id="main" class="wrapper">
   <div class="container">
 
@@ -37,6 +121,9 @@
   </div>
 </div>
 <% end %>
+-->
+
+
 <!-- ORIGINAL CODE
 <table>
   <thead>

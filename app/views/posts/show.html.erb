@@ -1,8 +1,158 @@
+<div class="wrapper">
+		<!--=== Header ===-->
+
+		<!--=== End Header ===-->
+
+		<!--=== Breadcrumbs ===-->
+		<div class="breadcrumbs">
+			<div class="container">
+				<h1 class="pull-left">Lumedx Forum</h1>
+				<ul class="pull-right breadcrumb">
+					<li><%= link_to 'Home', root_path %></li>
+					<li><%= link_to 'Posts', posts_path %></li>
+					<li class="active"><%= @post.title %></li>
+				</ul>
+			</div>
+		</div><!--/breadcrumbs-->
+		<!--=== End Breadcrumbs ===-->
+
+		<!--=== Content Part ===-->
+		<div class="container content blog-page blog-item">
+			<!--Blog Post-->
+			<div class="blog margin-bottom-40">
+				<div class="blog-img">
+					<img class="img-responsive" src="../assets/4.jpg" alt="">
+				</div>
+				<h2><%= link_to (@post.title), post_path(@post) %></h2>
+				<div class="blog-post-tags">
+					<ul class="list-unstyled list-inline blog-info">
+						<li><i class="fa fa-calendar"></i> <%= time_ago_in_words @post.created_at %></li>
+						<li><i class="fa fa-pencil"></i> <%= @post.user.email %></li>
+						<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
+						<li><i class="fa fa-tags"></i> Technology, Education, Internet, Media</li>
+						<li><%= link_to 'Edit', edit_post_path(@post) %></li>
+						<li><%= link_to 'Back', posts_path %></li>
+					</ul>
+				</div>
+				<p><%= @post.content %></p><br>
+				<div class="tag-box tag-box-v2">
+					<p> <%= @post.content %> </p>
+				</div>
+				<p> <%= @post.content %> </p>
+				<p><%= @post.content %></p><br>
+				<blockquote>
+					<p><%= @post.content %></p>
+					<small><%= @post.user.email %></small>
+				</blockquote>
+				<p><%= @post.content %></p>
+			</div>
+			<!--End Blog Post-->
+
+
+			<hr>
+
+			<!-- Recent Comments -->
+			<div class="media">
+				<h3>Comments</h3>
+				<a class="pull-left" href="#">
+					<img class="media-object" src="../assets/img2.jpg" alt="" />
+				</a>
+
+				<% if @post.comments %>
+
+				<div class="media-body">
+					<% @post.comments.each do |comment| %>
+					<h4 class="media-heading"><%= comment.user.email %> <span>					
+						<%= time_ago_in_words comment.created_at %>	
+						<% if comment.user == current_user %>
+						<%= link_to 'Delete comment', post_comment_path(@post,comment), method: :delete, data: {confirm: "Are you sure?"} %>
+						<% end %></span>
+					</h4>
+					<p><%= comment.content %></p>
+					<hr>
+					<% end %>
+
+				<% end %>
+				</div>
+			<!-- End Recent Comments -->
+
+			<hr>
+
+			<!-- Comment Form -->
+			<div class="post-comment">
+				<h3>Leave a Comment</h3>
+					<%= form_for [@post, @post.comments.new] do |f| %>
+					<%=f.text_field :content, placeholder: 'Add a comment...' %>
+					<% end %>
+			</div>
+ 		</div><!--/media-->
+<!--
+				<form>
+					<label>Name</label>
+					<div class="row margin-bottom-20">
+						<div class="col-md-7 col-md-offset-0">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+
+					<label>Email <span class="color-red">*</span></label>
+					<div class="row margin-bottom-20">
+						<div class="col-md-7 col-md-offset-0">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+
+					<label>Message</label>
+					<div class="row margin-bottom-20">
+						<div class="col-md-11 col-md-offset-0">
+							<textarea class="form-control" rows="8"></textarea>
+						</div>
+					</div>
+
+					<p><button class="btn-u" type="submit">Send Message</button></p>
+				</form>
+			-->
+
+			<!-- End Comment Form -->
+
+		</div><!--/container-->
+
+		<!--=== End Content Part ===-->
+</div>
+		<!--=== Footer Version 1 ===-->
+<%= render 'footer' %>
+		<!--=== End Footer Version 1 ===-->
+	</div><!--/wrapper-->
+
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			App.init();
+			StyleSwitcher.initStyleSwitcher();
+		});
+	</script>
+<!--[if lt IE 9]>
+		<script src="assets/plugins/respond.js"></script>
+		<script src="assets/plugins/html5shiv.js"></script>
+		<script src="assets/plugins/placeholder-IE-fixes.js"></script>
+		<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+<!-- ORIGINAL CODE
 <section id="main" class="wrapper">
   <div class="container">
     <header class="major">
     	<p id="notice"><%= notice %></p>
 
+<p> Posted by <%= @post.user.email %> </p>
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -18,3 +168,4 @@
 		</header>
 	</div>
 </section>
+-->

@@ -88,9 +88,9 @@
 								Home
 							</a>
 							<ul class="dropdown-menu">
-								<li class="active"><%= link_to 'HVA Home', root_path %></li>
-								<li><%= link_to 'Services Home', services_path %></li>
-								<li><%= link_to 'Analytics Home', analytics_showcase_path %></li>
+								<li><%= link_to 'HVA', root_path %></li>
+								<li><%= link_to 'Services', services_path %></li>
+								<li><%= link_to 'Analytics', analytics_showcase_path %></li>
 								<!-- End One Page -->
 
 								<!-- Shop UI Page -->
@@ -217,7 +217,7 @@
 						</li>
 						<!-- End Demo Pages -->
 						<% if user_signed_in? %>
-						<li><%= link_to "My Profile", posts_path %></li>
+						<li><%= link_to "My Profile", current_user %></li>
 						<% else %>
 						<% end %>
 						<!-- Search Block -->

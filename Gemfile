@@ -25,6 +25,9 @@ gem 'jquery-turbolinks'
 gem 'sprockets'
 gem 'parallaxslider-rails'
 
+
+#added by Brian to create profile pictures
+gem 'paperclip', '~> 4.2'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 

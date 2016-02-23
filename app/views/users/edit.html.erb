@@ -1,0 +1,15 @@
+<section id="main" class="wrapper">
+  <div class="container">
+    <header class="major">
+<h1>Editing User Profile</h1>
+
+<%= form_for @user do |f| %>
+	<%= f.input :image %>
+	<%= f.button :submit %>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', user_path(@user) %>
+		</header>
+	</div>
+</section>
