@@ -38,7 +38,7 @@
 				<div class="topbar">
 					<ul class="loginbar pull-right">
 						<% if user_signed_in? %>
-							<li>Currently signed in as <%= current_user.email %>. Not you?</li>
+							<li>Signed in as <%= current_user.email %>. Not you?</li>
 							<li class="topbar-devider"></li>
 							<li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
 						<% else %>
